@@ -1,0 +1,50 @@
+.page {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 320px;
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  position: sticky;
+  top: 24px;
+}
+
+.results {
+  flex: 1;
+  min-width: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.loadMore {
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 40px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.loadMore:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.error {
+  padding: 40px;
+  text-align: center;
+  color: var(--color-error);
+}

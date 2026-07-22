@@ -1,0 +1,81 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+}
+
+.iconCircle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px dashed var(--color-border);
+  margin-bottom: 24px;
+}
+
+.truckIcon {
+  font-size: 56px;
+  color: var(--color-primary-light);
+}
+
+.searchBadge {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 18px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.text {
+  max-width: 420px;
+  color: var(--color-icon);
+  margin-bottom: 32px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.clearButton {
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-weight: 500;
+}
+
+.clearButton:hover {
+  border-color: var(--color-primary);
+}
+
+.viewAllButton {
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.viewAllButton:hover {
+  background-color: var(--color-primary-light);
+}

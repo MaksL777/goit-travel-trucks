@@ -1,0 +1,73 @@
+.card {
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  color: var(--color-icon);
+  font-size: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background-color: var(--color-white);
+  font-size: 15px;
+  color: var(--color-heading);
+  resize: vertical;
+}
+
+.input::placeholder {
+  color: var(--color-icon);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.inputError {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.error {
+  font-size: 13px;
+  color: var(--color-error);
+}
+
+.submit {
+  margin-top: 8px;
+  padding: 16px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.15s ease;
+}
+
+.submit:hover {
+  background-color: var(--color-primary-light);
+}

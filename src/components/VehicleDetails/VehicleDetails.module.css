@@ -1,0 +1,59 @@
+.wrapper {
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-white);
+  font-size: 14px;
+  color: var(--color-heading);
+  text-transform: capitalize;
+}
+
+.pillIcon {
+  font-size: 18px;
+  color: var(--color-icon);
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+}
+
+.specRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.specRow:last-child {
+  border-bottom: none;
+}
+
+.specLabel {
+  color: var(--color-icon);
+  font-size: 15px;
+}
+
+.specValue {
+  color: var(--color-heading);
+  font-weight: 500;
+  font-size: 15px;
+}

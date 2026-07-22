@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-icon);
+  font-size: 16px;
+  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.12);
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.button:hover {
+  transform: scale(1.08);
+}
+
+.filled {
+  color: #e0433d;
+}

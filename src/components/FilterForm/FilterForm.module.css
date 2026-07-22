@@ -1,0 +1,149 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--color-icon);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 16px;
+  color: var(--color-icon);
+  font-size: 18px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background-color: var(--color-white);
+  font-size: 15px;
+  color: var(--color-heading);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.filtersHeading {
+  font-size: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.group {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-icon);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.groupIcon {
+  font-size: 16px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: var(--color-heading);
+  cursor: pointer;
+}
+
+.option input {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.radioMark {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+}
+
+.option input:checked + .radioMark {
+  border-color: var(--color-primary);
+}
+
+.option input:checked + .radioMark::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.option input:focus-visible + .radioMark {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.searchButton {
+  padding: 16px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.15s ease;
+}
+
+.searchButton:hover {
+  background-color: var(--color-primary-light);
+}
+
+.clearButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-heading);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.clearButton:hover {
+  border-color: var(--color-primary);
+}

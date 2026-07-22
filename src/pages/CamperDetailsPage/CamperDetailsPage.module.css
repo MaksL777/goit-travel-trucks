@@ -1,0 +1,87 @@
+.page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.name {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metaIcon {
+  font-size: 18px;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.specsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoCard {
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.sectionTitle {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.errorState {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--color-error);
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--color-primary);
+  font-weight: 500;
+}

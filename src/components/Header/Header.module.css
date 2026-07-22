@@ -1,0 +1,42 @@
+.header {
+  background-color: var(--color-bg-page);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-heading);
+  letter-spacing: -0.02em;
+}
+
+.logoAccent {
+  color: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-icon);
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--color-heading);
+}
+
+.active {
+  color: var(--color-heading);
+}
