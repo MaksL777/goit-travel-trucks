@@ -1,20 +1,33 @@
-import { NavLink } from 'react-router-dom';
-import css from './Header.module.css';
+import { NavLink } from "react-router-dom";
+import styles from "./Header.module.css";
 
-const linkClass = ({ isActive }) => (isActive ? `${css.link} ${css.active}` : css.link);
-
-function Header() {
+export default function Header() {
   return (
-    <header className={css.header}>
-      <div className={`container ${css.inner}`}>
-        <NavLink to="/" className={css.logo}>
-          Travel<span className={css.logoAccent}>Trucks</span>
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <NavLink to="/" className={styles.logo}>
+          Travel<span className={styles.logoAccent}>Trucks</span>
         </NavLink>
-        <nav className={css.nav} aria-label="Main navigation">
-          <NavLink to="/" end className={linkClass}>
+        <nav className={styles.nav}>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.navLink} ${styles.navLinkActive}`
+                : styles.navLink
+            }
+          >
             Home
           </NavLink>
-          <NavLink to="/catalog" className={linkClass}>
+          <NavLink
+            to="/catalog"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.navLink} ${styles.navLinkActive}`
+                : styles.navLink
+            }
+          >
             Catalog
           </NavLink>
         </nav>
@@ -22,5 +35,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

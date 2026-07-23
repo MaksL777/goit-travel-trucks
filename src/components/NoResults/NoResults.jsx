@@ -1,15 +1,10 @@
-import { TbTruck, TbSearch } from 'react-icons/tb';
-import css from './NoResults.module.css';
+import emptyState from "../../assets/empty-state.png";
+import css from "./NoResults.module.css";
 
 function NoResults({ onClear, onViewAll }) {
   return (
     <div className={css.wrapper}>
-      <div className={css.iconCircle}>
-        <TbTruck className={css.truckIcon} />
-        <span className={css.searchBadge}>
-          <TbSearch />
-        </span>
-      </div>
+      <img src={emptyState} alt="No campers found" className={css.image} />
       <h2 className={css.title}>No campers found</h2>
       <p className={css.text}>
         We couldn&rsquo;t find any campers that match your filters. Try

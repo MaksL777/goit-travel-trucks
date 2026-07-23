@@ -4,8 +4,9 @@
   align-items: center;
   text-align: center;
   padding: 80px 40px;
-  background-color: var(--color-bg-page);
+  background-color: var(--color-surface);
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
 .iconCircle {
@@ -20,9 +21,14 @@
   margin-bottom: 24px;
 }
 
+.image {
+  max-width: 488px;
+  height: 463px;
+}
+
 .truckIcon {
   font-size: 56px;
-  color: var(--color-primary-light);
+  color: color-mix(in srgb, var(--color-secondary) 50%, transparent);
 }
 
 .searchBadge {
@@ -35,19 +41,21 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: var(--color-white);
   font-size: 18px;
 }
 
 .title {
   font-size: 24px;
+  font-weight: 700;
+  color: var(--color-heading);
   margin-bottom: 12px;
 }
 
 .text {
   max-width: 420px;
-  color: var(--color-icon);
+  color: var(--color-muted);
   margin-bottom: 32px;
 }
 
@@ -61,21 +69,24 @@
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
+  color: var(--color-heading);
   font-weight: 500;
+  transition: border-color 0.15s ease;
 }
 
 .clearButton:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
 .viewAllButton {
   padding: 14px 28px;
   border-radius: var(--radius-pill);
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: var(--color-white);
   font-weight: 600;
+  transition: background-color 0.15s ease;
 }
 
 .viewAllButton:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-secondary-hover);
 }

@@ -1,0 +1,17 @@
+:root {
+  --color-surface: #f7f7f7;
+  --color-secondary: #829b91;
+  --color-bg: #f2f4f7;
+  --color-secondary-hover: #6d7b75;
+  --color-badge-bg: #eaecf0;
+  --color-accent: #ffc531;
+  --color-muted: #6c717b;
+  --color-white: #ffffff;
+  --color-heading: #101828;
+  --color-text: #475467;
+  --color-danger-bg: #ffe8e8;
+  --color-danger: #ff4d4f;
+  --color-border: #dadde1;
+  --color-overlay: #dfdfdf;
+  color-scheme: light;
+}

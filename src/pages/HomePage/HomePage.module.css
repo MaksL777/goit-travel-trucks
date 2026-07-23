@@ -1,76 +1,83 @@
 .hero {
+  flex: 1;
   position: relative;
-  min-height: calc(100vh - 81px);
+  min-height: calc(100dvh - 72px);
   display: flex;
   align-items: center;
-  background-image: url("/src/assets/hero.webp");
-  background-size: cover;
-  background-position: center;
   overflow: hidden;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  right: -6%;
-  bottom: -10%;
-  width: 620px;
-  height: 620px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(130, 155, 145, 0.45),
-    transparent 70%
-  );
-}
-
-.overlay {
+.bgImage {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background: linear-gradient(
     90deg,
-    rgba(16, 24, 40, 0.55) 0%,
-    rgba(16, 24, 40, 0.1) 65%
+    color-mix(in srgb, var(--color-heading) 55%, transparent) 0%,
+    color-mix(in srgb, var(--color-heading) 10%, transparent) 60%
   );
 }
 
 .content {
   position: relative;
-  z-index: 1;
-  max-width: 620px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  z-index: 2;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
 .title {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 0.67;
   color: var(--color-white);
-  font-size: 56px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  max-width: 650px;
+  margin-bottom: 16px;
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 18px;
-  margin-top: 16px;
-  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.33;
+  color: var(--color-white);
+  margin-bottom: 40px;
 }
 
 .cta {
   display: inline-flex;
   align-items: center;
-  padding: 16px 40px;
-  border-radius: var(--radius-pill);
-  background-color: var(--color-primary);
+  justify-content: center;
+  min-width: 173px;
+  height: 56px;
+  padding: 0 32px;
+  background-color: var(--color-secondary);
   color: var(--color-white);
-  font-weight: 600;
+  border-radius: var(--radius-pill);
   font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
   transition:
-    background-color 0.15s ease,
-    transform 0.15s ease;
+    background 0.15s ease,
+    transform 0.1s ease;
 }
 
 .cta:hover {
-  background-color: var(--color-primary-light);
-  transform: translateY(-1px);
+  background-color: var(--color-secondary-hover);
+}
+
+.cta:active {
+  transform: scale(0.98);
 }

@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { MdLocationOn, MdClear } from 'react-icons/md';
-import { PiGasPump, PiGearFine } from 'react-icons/pi';
-import { TbTruck } from 'react-icons/tb';
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { MdClear } from "react-icons/md";
 import {
   setLocation,
   setForm,
@@ -10,36 +8,36 @@ import {
   setTransmission,
   applyFilters,
   clearFilters,
-} from '../../redux/filtersSlice.js';
-import { fetchCampers } from '../../redux/campersSlice.js';
-import css from './FilterForm.module.css';
+} from "../../redux/filtersSlice.js";
+import { fetchCampers } from "../../redux/campersSlice.js";
+import css from "./FilterForm.module.css";
+
+// Import your custom SVG asset
+import mapIcon from "../../assets/Map.svg";
 
 const CAMPER_FORMS = [
-  { value: 'alcove', label: 'Alcove' },
-  { value: 'panelTruck', label: 'Panel Van' },
-  { value: 'fullyIntegrated', label: 'Integrated' },
-  { value: 'semiIntegrated', label: 'Semi Integrated' },
+  { value: "alcove", label: "Alcove" },
+  { value: "panelTruck", label: "Panel Van" },
+  { value: "fullyIntegrated", label: "Integrated" },
+  { value: "semiIntegrated", label: "Semi Integrated" },
 ];
 
 const ENGINES = [
-  { value: 'diesel', label: 'Diesel' },
-  { value: 'petrol', label: 'Petrol' },
-  { value: 'hybrid', label: 'Hybrid' },
-  { value: 'electric', label: 'Electric' },
+  { value: "diesel", label: "Diesel" },
+  { value: "petrol", label: "Petrol" },
+  { value: "hybrid", label: "Hybrid" },
+  { value: "electric", label: "Electric" },
 ];
 
 const TRANSMISSIONS = [
-  { value: 'automatic', label: 'Automatic' },
-  { value: 'manual', label: 'Manual' },
+  { value: "automatic", label: "Automatic" },
+  { value: "manual", label: "Manual" },
 ];
 
-function RadioGroup({ title, icon, options, selected, onChange }) {
+function RadioGroup({ title, options, selected, onChange }) {
   return (
     <fieldset className={css.group}>
-      <legend className={css.groupTitle}>
-        {icon}
-        {title}
-      </legend>
+      <legend className={css.groupTitle}>{title}</legend>
       {options.map(({ value, label }) => (
         <label key={value} className={css.option}>
           <input
@@ -47,8 +45,7 @@ function RadioGroup({ title, icon, options, selected, onChange }) {
             name={title}
             checked={selected === value}
             onClick={() => {
-              // Clicking an already-selected option clears the filter.
-              if (selected === value) onChange('');
+              if (selected === value) onChange("");
             }}
             onChange={() => onChange(value)}
           />
@@ -80,10 +77,10 @@ function FilterForm() {
   };
 
   const handleClear = () => {
-    setLocationDraft('');
-    setFormDraft('');
-    setEngineDraft('');
-    setTransmissionDraft('');
+    setLocationDraft("");
+    setFormDraft("");
+    setEngineDraft("");
+    setTransmissionDraft("");
     dispatch(clearFilters());
     dispatch(fetchCampers());
   };
@@ -95,7 +92,13 @@ function FilterForm() {
           Location
         </label>
         <div className={css.inputWrapper}>
-          <MdLocationOn className={css.inputIcon} />
+          <img
+            src={mapIcon}
+            alt="Location"
+            className={css.inputIcon}
+            width={22}
+            height={22}
+          />
           <input
             id="location"
             type="text"
@@ -111,21 +114,18 @@ function FilterForm() {
 
       <RadioGroup
         title="Camper form"
-        icon={<TbTruck className={css.groupIcon} />}
         options={CAMPER_FORMS}
         selected={form}
         onChange={setFormDraft}
       />
       <RadioGroup
         title="Engine"
-        icon={<PiGasPump className={css.groupIcon} />}
         options={ENGINES}
         selected={engine}
         onChange={setEngineDraft}
       />
       <RadioGroup
         title="Transmission"
-        icon={<PiGearFine className={css.groupIcon} />}
         options={TRANSMISSIONS}
         selected={transmission}
         onChange={setTransmissionDraft}
@@ -135,7 +135,7 @@ function FilterForm() {
         Search
       </button>
       <button type="button" className={css.clearButton} onClick={handleClear}>
-        <MdClear /> Clear filters
+        <MdClear size={20} /> Clear filters
       </button>
     </form>
   );

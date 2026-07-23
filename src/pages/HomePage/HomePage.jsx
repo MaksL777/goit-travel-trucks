@@ -1,19 +1,29 @@
-import { Link } from 'react-router-dom';
-import css from './HomePage.module.css';
+import { useNavigate } from "react-router-dom";
+import heroImage from "../../assets/hero.webp";
+import styles from "./HomePage.module.css";
 
-function HomePage() {
+export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
-    <section className={css.hero}>
-      <div className={css.overlay} />
-      <div className={`container ${css.content}`}>
-        <h1 className={css.title}>Campers of your dreams</h1>
-        <p className={css.subtitle}>You can find everything you want in our catalog</p>
-        <Link to="/catalog" className={css.cta}>
+    <section className={styles.hero}>
+      <div
+        className={styles.bgImage}
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className={styles.content}>
+        <h1 className={styles.title}>Campers of your dreams</h1>
+        <p className={styles.subtitle}>
+          You can find everything you want in our catalog
+        </p>
+        <button
+          type="button"
+          className={styles.cta}
+          onClick={() => navigate("/catalog")}
+        >
           View Now
-        </Link>
+        </button>
       </div>
     </section>
   );
 }
-
-export default HomePage;

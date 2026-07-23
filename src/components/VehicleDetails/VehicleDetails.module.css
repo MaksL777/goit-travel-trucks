@@ -1,15 +1,23 @@
 .wrapper {
-  background-color: var(--color-bg-page);
+  background-color: var(--color-surface);
   border-radius: var(--radius-md);
   padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 24px;
 }
 
 .pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  padding-bottom: 24px;
-  margin-bottom: 8px;
+  gap: 8px;
+  padding-bottom: 20px;
+  margin-bottom: 16px;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -17,43 +25,38 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: var(--radius-pill);
-  background-color: var(--color-white);
+  background-color: var(--color-badge-bg);
   font-size: 14px;
+  line-height: 1.4;
   color: var(--color-heading);
   text-transform: capitalize;
 }
 
 .pillIcon {
   font-size: 18px;
-  color: var(--color-icon);
+  color: var(--color-heading);
 }
 
 .specs {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
 .specRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.specRow:last-child {
-  border-bottom: none;
+  font-size: 16px;
 }
 
 .specLabel {
-  color: var(--color-icon);
-  font-size: 15px;
+  color: var(--color-text);
 }
 
 .specValue {
   color: var(--color-heading);
   font-weight: 500;
-  font-size: 15px;
 }

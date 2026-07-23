@@ -8,8 +8,9 @@ import {
   TbMicrowave,
   TbFlame,
   TbDroplet,
+  TbAutomaticGearbox,
 } from "react-icons/tb";
-import { PiGasPump, PiGearFine } from "react-icons/pi";
+import { PiGasPump } from "react-icons/pi";
 import {
   formatForm,
   formatEngine,
@@ -21,7 +22,7 @@ const EQUIPMENT = [
   {
     key: "transmission",
     label: (camper) => formatTransmission(camper.transmission),
-    icon: PiGearFine,
+    icon: TbAutomaticGearbox,
   },
   {
     key: "engine",
@@ -58,6 +59,7 @@ function VehicleDetails({ camper }) {
 
   return (
     <div className={css.wrapper}>
+      <h2 className={css.title}>Vehicle details</h2>
       {pills.length > 0 && (
         <ul className={css.pills}>
           {pills.map(({ key, label, icon: Icon }) => (

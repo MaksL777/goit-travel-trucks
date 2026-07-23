@@ -1,19 +1,20 @@
-import { Link } from 'react-router-dom';
-import css from './NotFoundPage.module.css';
+import { Link } from "react-router-dom";
+import Icon from "../../components/Icon/Icon";
+import styles from "./NotFoundPage.module.css";
 
-function NotFoundPage() {
+export default function NotFoundPage() {
   return (
-    <div className={`container ${css.wrapper}`}>
-      <p className={css.code}>404</p>
-      <h1 className={css.title}>Page not found</h1>
-      <p className={css.text}>
-        The page you&rsquo;re looking for doesn&rsquo;t exist or may have been moved.
+    <div className={styles.wrapper}>
+      <span className={styles.code}>
+        4<Icon name="black-map" size={56} className={styles.codeIcon} />4
+      </span>
+      <h1 className={styles.title}>Page not found</h1>
+      <p className={styles.text}>
+        The page you are looking for doesn&apos;t exist or was moved.
       </p>
-      <Link to="/" className={css.link}>
+      <Link className={styles.homeButton} to="/">
         Back to home
       </Link>
     </div>
   );
 }
-
-export default NotFoundPage;

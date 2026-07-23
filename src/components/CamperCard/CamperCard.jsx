@@ -1,17 +1,19 @@
-import { Link } from 'react-router-dom';
-import { MdLocationOn } from 'react-icons/md';
-import { PiGasPump, PiGearFine } from 'react-icons/pi';
-import { TbTruck } from 'react-icons/tb';
-import RatingStars from '../RatingStars/RatingStars.jsx';
-import FavoriteButton from '../FavoriteButton/FavoriteButton.jsx';
+import { Link } from "react-router-dom";
+import { MdLocationOn } from "react-icons/md";
+import RatingStars from "../RatingStars/RatingStars.jsx";
+import FavoriteButton from "../FavoriteButton/FavoriteButton.jsx";
 import {
   formatPrice,
   formatLocation,
   formatForm,
   formatEngine,
   formatTransmission,
-} from '../../utils/format.js';
-import css from './CamperCard.module.css';
+} from "../../utils/format.js";
+import css from "./CamperCard.module.css";
+
+import fuelIcon from "../../assets/fuel.svg";
+import gearIcon from "../../assets/gear.svg";
+import alcoveIcon from "../../assets/Alclove.svg";
 
 function CamperCard({ camper }) {
   const {
@@ -34,7 +36,12 @@ function CamperCard({ camper }) {
     <li className={css.card}>
       <div className={css.imageWrapper}>
         {thumbnail ? (
-          <img src={thumbnail} alt={name} className={css.image} loading="lazy" />
+          <img
+            src={thumbnail}
+            alt={name}
+            className={css.image}
+            loading="lazy"
+          />
         ) : (
           <div className={css.imagePlaceholder} aria-hidden="true" />
         )}
@@ -64,20 +71,43 @@ function CamperCard({ camper }) {
 
         <ul className={css.features}>
           <li className={css.feature}>
-            <PiGasPump className={css.featureIcon} />
+            <img
+              src={fuelIcon}
+              alt="Fuel"
+              className={css.featureIcon}
+              width={18}
+              height={18}
+            />
             {formatEngine(engine)}
           </li>
           <li className={css.feature}>
-            <PiGearFine className={css.featureIcon} />
+            <img
+              src={gearIcon}
+              alt="Transmission"
+              className={css.featureIcon}
+              width={18}
+              height={18}
+            />
             {formatTransmission(transmission)}
           </li>
           <li className={css.feature}>
-            <TbTruck className={css.featureIcon} />
+            <img
+              src={alcoveIcon}
+              alt="Camper form"
+              className={css.featureIcon}
+              width={18}
+              height={18}
+            />
             {formatForm(form)}
           </li>
         </ul>
 
-        <Link to={`/catalog/${id}`} target="_blank" rel="noopener noreferrer" className={css.showMore}>
+        <Link
+          to={`/catalog/${id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={css.showMore}
+        >
           Show more
         </Link>
       </div>

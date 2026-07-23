@@ -5,11 +5,14 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--color-white);
-  color: var(--color-icon);
+  background-color: var(--color-white);
+  color: var(--color-muted);
   font-size: 16px;
-  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.12);
-  transition: transform 0.15s ease, color 0.15s ease;
+  box-shadow: 0 1px 4px
+    color-mix(in srgb, var(--color-heading) 12%, transparent);
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
 }
 
 .button:hover {
@@ -17,5 +20,5 @@
 }
 
 .filled {
-  color: #e0433d;
+  color: var(--color-danger);
 }

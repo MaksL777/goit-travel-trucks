@@ -1,0 +1,8 @@
+:root {
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 100px;
+  --shadow-card: 0 2px 12px
+    color-mix(in srgb, var(--color-heading) 4%, transparent);
+}
