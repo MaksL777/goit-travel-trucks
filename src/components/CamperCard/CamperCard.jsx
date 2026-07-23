@@ -11,8 +11,8 @@ import {
 } from "../../utils/format.js";
 import css from "./CamperCard.module.css";
 
-import fuelIcon from "../../assets/fuel.svg";
-import gearIcon from "../../assets/gear.svg";
+import fuelIcon from "../../assets/Fuel.svg";
+import gearIcon from "../../assets/Gear.svg";
 import alcoveIcon from "../../assets/Alclove.svg";
 
 function CamperCard({ camper }) {
